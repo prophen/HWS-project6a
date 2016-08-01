@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  HWS-project2
+//  HWS-project6a
 //
 //  Created by Nikema Prophet on 7/30/16.
 //  Copyright © 2016 Nikema Prophet. All rights reserved.

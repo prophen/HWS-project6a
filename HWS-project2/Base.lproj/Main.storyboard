@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,13 +20,19 @@
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUg-LV-JPs">
                                 <rect key="frame" x="200" y="204" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GUg-LV-JPs" secondAttribute="height" multiplier="2:1" id="A7z-S8-d0L"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTT-1O-oxJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tU-mm-HOc">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tU-mm-HOc">
                                 <rect key="frame" x="200" y="324" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4tU-mm-HOc" secondAttribute="height" multiplier="2:1" id="rfR-Fn-Hui"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VoC-lR-2Fh"/>
@@ -33,6 +40,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAV-eO-5Qf">
                                 <rect key="frame" x="200" y="84" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HAV-eO-5Qf" secondAttribute="height" multiplier="2:1" id="hmQ-7F-1G8"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pdx-G5-Pen"/>
@@ -41,11 +51,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4tU-mm-HOc" secondAttribute="bottom" constant="20" id="4CV-Fs-xGM"/>
+                            <constraint firstItem="4tU-mm-HOc" firstAttribute="height" secondItem="HAV-eO-5Qf" secondAttribute="height" id="7rD-M5-Bgu"/>
                             <constraint firstItem="HAV-eO-5Qf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D8Y-AH-U5I"/>
                             <constraint firstItem="GUg-LV-JPs" firstAttribute="top" secondItem="HAV-eO-5Qf" secondAttribute="bottom" constant="20" id="FHY-IL-NyS"/>
+                            <constraint firstItem="GUg-LV-JPs" firstAttribute="height" secondItem="HAV-eO-5Qf" secondAttribute="height" id="YkH-xF-GBG"/>
                             <constraint firstItem="HAV-eO-5Qf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="a36-6i-hY2"/>
                             <constraint firstItem="4tU-mm-HOc" firstAttribute="centerX" secondItem="GUg-LV-JPs" secondAttribute="centerX" id="cjl-k6-Tjp"/>
-                            <constraint firstItem="4tU-mm-HOc" firstAttribute="top" secondItem="GUg-LV-JPs" secondAttribute="bottom" constant="20" id="i4c-R7-lbs"/>
+                            <constraint firstItem="4tU-mm-HOc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GUg-LV-JPs" secondAttribute="bottom" constant="20" id="i4c-R7-lbs"/>
                             <constraint firstItem="GUg-LV-JPs" firstAttribute="centerX" secondItem="HAV-eO-5Qf" secondAttribute="centerX" id="wLN-HF-aU9"/>
                         </constraints>
                     </view>
